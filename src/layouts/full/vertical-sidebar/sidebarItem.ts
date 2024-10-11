@@ -38,10 +38,10 @@ const sidebarItem: menu[] = [
     },
     { header: 'User Managemnt' },
     {
-        title: 'Users',
+        title: 'Customers',
         icon: 'widget-4-linear',
         BgColor: 'warning',
-        to: '/users'
+        to: '/customers'
     },
     { header: 'Payments & Menu' },
     {
@@ -51,10 +51,10 @@ const sidebarItem: menu[] = [
         to: '/transactions'
     },
     {
-        title: 'Menu',
+        title: 'Products',
         icon: 'widget-4-linear',
         BgColor: 'warning',
-        to: '/menu'
+        to: '/products'
     },
     { header: 'Profile' },
     // {
