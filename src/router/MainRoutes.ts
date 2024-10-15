@@ -186,9 +186,9 @@ const MainRoutes = {
             component: () => import('@/views/ui-elements/UiList.vue')
         },
         {
-            name: 'Menus',
-            path: '/ui-components/menus',
-            component: () => import('@/views/ui-elements/UiMenus.vue')
+            name: 'Products',
+            path: '/products',
+            component: () => import('@/views/pages/products/productList.vue')
         },
         {
             name: 'Rating',
@@ -511,6 +511,16 @@ const MainRoutes = {
             name: 'Users',
             path: '/users',
             component: () => import('@/views/pages/users/usersList.vue')
+        },
+        {
+            name: 'Customers',
+            path: '/customers',
+            component: () => import('@/views/pages/customers/customerList.vue')
+        },
+        {
+            name: 'Orders',
+            path: '/orders',
+            component: () => import('@/views/pages/orders/orderList.vue')
         },
         {
             name: 'Transactions',
