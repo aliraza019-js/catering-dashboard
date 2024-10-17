@@ -5,7 +5,7 @@ import UiParentCard from '@/components/shared/UiParentCard.vue';
 import axios from 'axios';
 
 const headers = ref([
- { title: 'Customer Id', key: 'id' },
+  { title: 'Customer Id', key: 'id' },
   { title: 'Name', key: 'name', align: 'start' },
   { title: 'Email', key: 'email' },
   { title: 'Phone', key: 'phone' },
@@ -17,9 +17,9 @@ const customers = ref([])
 //fetching customers 
 async function fetchCustomers() {
   try {
-    const response = await axios.get('http://localhost:3002/api/customers/all');
+    const response = await axios.get('https://backend.vcaterings.com/api/customers/all');
     customers.value = response?.data.map(customer => ({
-      id : customer._id,
+      id: customer._id,
       name: customer.name,
       email: customer.email,
       phone: customer.phone,
@@ -40,18 +40,7 @@ onMounted(() => {
   <v-row>
     <v-col cols="12">
       <UiParentCard title="Customers">
-        <v-data-table 
-         class="border rounded-md crud-tbl" 
-         :headers="headers" 
-         :items="customers"
-          hide-default-footer
-          >
-          <template v-slot:top>
-            <v-toolbar flat class="border-bottom">
-              <v-toolbar-title>Customers Detail</v-toolbar-title>
-              <v-spacer></v-spacer>
-            </v-toolbar>
-          </template>
+        <v-data-table class="border rounded-md crud-tbl" :headers="headers" :items="customers" hide-default-footer>
         </v-data-table>
       </UiParentCard>
     </v-col>

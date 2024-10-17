@@ -21,7 +21,7 @@ const headers = ref([
 const orders = ref([])
 async function fetchOrders() {
   try {
-    const response = await axios.get('http://localhost:3002/api/orders/all-orders');
+    const response = await axios.get('https://backend.vcaterings.com/api/orders/all-orders');
     orders.value = response?.data.map(order => ({
       id : order._id,
       customerName: order.customer.name,
